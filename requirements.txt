@@ -1,0 +1,5 @@
+discord==1.0.1
+asyncio
+pymoe
+youtube_dl
+pip
