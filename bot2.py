@@ -16,7 +16,7 @@ import concurrent
 
  
 oot_channel_id_list = [
-'525131707410677761','568617830258442255','736941384233386036','739895252499824756','525131707410677761','735234693175181364','700241807581249548','731698484599586897','742297813211283567','736540378001440819','740581407205752873','568617830258442255','735234693175181364','750013118943330334','728413225078751251'
+'782496164016685086','783020931634167808','760557729252114503','769588498629001257','782280380166176819','779956465640669184','774480600010457108','570794448808837131','779443760073015336','773602513597235231','740581407205752873','568617830258442255','735234693175181364','750013118943330334','728413225078751251'
 ]
 
 
@@ -136,14 +136,14 @@ class Bot(discord.Client):
         self.answer_scores = answer_scores
 
         # embed creation
-        self.embed=discord.Embed(title="**Vedantu**",color=0x0ff14)
-        self.embed.add_field(name=f"**Option 1 :arrow-1: **", value="0{g} ", inline=True)
-        self.embed.add_field(name=f"**Option 2 :arrow-1: **", value="0{g} ", inline=True)
-        self.embed.add_field(name=f"**Option 3 :arrow-1: **", value="0{g} ", inline=True)
+        self.embed=discord.Embed(title="**SWAG IQ**",color=0x0ff14)
+        self.embed.add_field(name=f"**Option 1  **", value="0{g} ", inline=True)
+        self.embed.add_field(name=f"**Option 2  **", value="0{g} ", inline=True)
+        self.embed.add_field(name=f"**Option 3  **", value="0{g} ", inline=True)
         #self.embed.add_field(name=f"**__BEST ANSWER..!__**", value="0.0", inline=True)
         #self.embed.add_field(name=f"**___SUGGEST ANSWER___**", value="0.0", inline=True)
         self.embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/583675981466828801/685776310525755392/unnamed.png")
-        self.embed.set_footer(text="Rahul Dagur")
+        self.embed.set_footer(text="Made by SA〢PR0")
    
         
 
@@ -178,21 +178,21 @@ class Bot(discord.Client):
 
         if highest > 0:
             if answer == 1:
-                one_check = "<a:emoji_2:734736994764062810>"
+                one_check = ":white_check_mark:"
             else:
                 one_check = ""
                 wrong_answer = " :one: :x:"
        
 
             if answer == 2:
-                two_check = "<a:emoji_2:734736994764062810>"
+                two_check = ":white_check_mark:"
             else:
                 two_check
                 wrong_answer = " :two: :x:"
        
 
             if answer == 3:
-                three_check = "<a:emoji_2:734736994764062810>"
+                three_check = ":white_check_mark:"
             else:
                 three_check = ""
                 wrong_answer = " :three: :x:"
@@ -209,7 +209,7 @@ class Bot(discord.Client):
                 three_cross = ":x:"
             
              
-        self.embed=discord.Embed(title=f"**Crowd Results**\nAnswer 1 <:emoji_3:734736679545602070>  {lst_scores[0]}{one_check}\nAnswer 2 <:emoji_3:734736679545602070>  {lst_scores[1]}{two_check}\nAnswer 3 <:emoji_3:734736679545602070>  {lst_scores[2]}{three_check}",color=0x0ff14)
+        self.embed=discord.Embed(title=f"**Crowd Results**\nAnswer 1   {lst_scores[0]}{one_check}\nAnswer 2   {lst_scores[1]}{two_check}\nAnswer 3   {lst_scores[2]}{three_check}",color=0x0ff14)
         
         if self.embed_msg is not None:
             await self.embed_msg.edit(embed=self.embed)
@@ -232,7 +232,7 @@ class Bot(discord.Client):
         if message.author == self.user or message.guild == None:
             return
 
-        if message.content.lower() == "+pb":
+        if message.content.lower() == "o":
             #await message.delete()
            # if BOT_OWNER_ROLE in []:
             self.embed_msg = None
@@ -273,7 +273,7 @@ def bot_with_cyclic_update_process(update_event, answer_scores):
     upd_thread.start()
 
     loop = asyncio.get_event_loop()
-    loop.create_task(bot.start('NzI3NDE5NDU0NDU5NDc4MDQ2.XvrkKA.qNsBj0-TGOdTEgF9xPGB1u62peU'))
+    loop.create_task(bot.start('Nzc4NjM5NjY2OTk5MDY2Njk0.X7U6sw.xHHemlb2ojYuoUBcpyy0NHH-TzM'))
     loop.run_forever()
 
 
@@ -282,7 +282,7 @@ def selfbot_process(update_event, answer_scores):
     selfbot = SelfBot(update_event, answer_scores)
 
     loop = asyncio.get_event_loop()
-    loop.create_task(selfbot.start('NTAyMTE0NDgxNDQ3NjMyODk2.X37PxQ.t9uNJCvadx7p62cCSp4Ey59cntE',
+    loop.create_task(selfbot.start('NzI0MTcwNTIwNzM1NTE0NjY2.X7PphQ.NGIGJmF8-W9dkzqsIUrkgDExws0',
                                    bot=False))
     loop.run_forever()
 
